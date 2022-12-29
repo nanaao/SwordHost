@@ -1,12 +1,12 @@
 package com.swordHostDemo.controller;
 
-import com.swordHostDemo.bean.OptionsBean;
+import com.swordHostDemo.bean.VaulesBean;
 
 /**
  * @date: 2022/12/27 20:24
  * @description:
  */
-public class MsfShell extends OptionsBean {
+public class MsfShell extends VaulesBean {
 
     public static String MsfCommand(String lhost, String lport) {
         //linuxhex

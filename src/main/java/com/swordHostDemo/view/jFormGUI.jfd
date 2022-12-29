@@ -29,7 +29,6 @@ new FormModel {
 					} )
 					add( new FormComponent( "javax.swing.JTextField" ) {
 						name: "LhostValue"
-						"text": new FormMessage( null, "LhostValue.text" )
 						addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "LhostValueKeyReleased", true ) )
 					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 						"x": 50
@@ -38,7 +37,6 @@ new FormModel {
 					} )
 					add( new FormComponent( "javax.swing.JTextField" ) {
 						name: "LportValue"
-						"text": new FormMessage( null, "LportValue.text" )
 						addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "LportValueKeyReleased", true ) )
 					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 						"x": 235
@@ -54,7 +52,6 @@ new FormModel {
 					} )
 					add( new FormComponent( "javax.swing.JTextField" ) {
 						name: "DNSlogValue"
-						"text": new FormMessage( null, "DNSlogValue.text" )
 						addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "DNSlogValueKeyReleased", true ) )
 					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 						"x": 375
@@ -63,7 +60,7 @@ new FormModel {
 					} )
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 					"x": 10
-					"y": 10
+					"y": 15
 					"height": 45
 					"width": 650
 				} )
@@ -85,7 +82,6 @@ new FormModel {
 					} )
 					add( new FormComponent( "javax.swing.JTextField" ) {
 						name: "RhostValue"
-						"text": new FormMessage( null, "RhostValue.text" )
 						addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "RhostValueKeyReleased", true ) )
 					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 						"x": 50
@@ -94,7 +90,6 @@ new FormModel {
 					} )
 					add( new FormComponent( "javax.swing.JTextField" ) {
 						name: "RportVaule"
-						"text": new FormMessage( null, "RportVaule.text" )
 						addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "RportVauleKeyReleased", true ) )
 					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 						"x": 235
@@ -110,7 +105,6 @@ new FormModel {
 					} )
 					add( new FormComponent( "javax.swing.JTextField" ) {
 						name: "CommandVaule"
-						"text": new FormMessage( null, "CommandVaule.text" )
 						addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "CommandVauleKeyReleased", true ) )
 					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 						"x": 375
@@ -121,11 +115,13 @@ new FormModel {
 					"width": 650
 					"height": 45
 					"x": 10
-					"y": 60
+					"y": 65
 				} )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"width": 670
 				"height": 120
+				"x": 5
+				"y": 15
 			} )
 			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
 				name: "Panel2"
@@ -275,27 +271,20 @@ new FormModel {
 							"tabPlacement": 2
 							add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
 								name: "Base64DeCodes"
-								add( new FormComponent( "javax.swing.JTextArea" ) {
-									name: "Base64EnsTextArea"
-								}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-									"x": 25
-									"y": 40
-									"width": 600
-									"height": 95
-								} )
 								add( new FormComponent( "javax.swing.JLabel" ) {
 									name: "label1"
 									"text": new FormMessage( null, "label1.text" )
 								}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 									"x": 25
-									"y": 15
+									"y": 10
 								} )
 								add( new FormComponent( "javax.swing.JLabel" ) {
 									name: "label2"
 									"text": new FormMessage( null, "label2.text" )
 								}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 									"x": 30
-									"y": 150
+									"y": 165
+									"height": 21
 								} )
 								add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
 									name: "scrollPane10"
@@ -303,10 +292,10 @@ new FormModel {
 										name: "Bas64DeTextArea"
 									} )
 								}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-									"width": 600
-									"height": 110
+									"width": 650
+									"height": 140
 									"x": 25
-									"y": 180
+									"y": 195
 								} )
 								add( new FormComponent( "javax.swing.JButton" ) {
 									name: "Babut1EnCode"
@@ -314,23 +303,34 @@ new FormModel {
 									addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "Babut1EnCodeMouseClicked", true ) )
 								}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 									"x": 190
-									"y": 145
+									"y": 160
 								} )
 								add( new FormComponent( "javax.swing.JButton" ) {
 									name: "Babut2DeCode"
 									"text": new FormMessage( null, "Babut2DeCode.text" )
 									addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "Babut2DeCodeMouseClicked", true ) )
 								}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-									"x": 335
-									"y": 145
+									"x": 345
+									"y": 160
 								} )
 								add( new FormComponent( "javax.swing.JButton" ) {
 									name: "Base64buttonSwap"
 									"text": new FormMessage( null, "Base64buttonSwap.text" )
 									addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "button2MouseClicked", true ) )
 								}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-									"x": 485
-									"y": 145
+									"x": 500
+									"y": 160
+								} )
+								add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+									name: "scrollPane11"
+									add( new FormComponent( "javax.swing.JTextArea" ) {
+										name: "Base64EnsTextArea"
+									} )
+								}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+									"width": 650
+									"height": 125
+									"x": 25
+									"y": 30
 								} )
 							}, new FormLayoutConstraints( null ) {
 								"title": new FormMessage( null, "Base64DeCodes.tab.title" )
@@ -338,27 +338,27 @@ new FormModel {
 						}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 							"x": 0
 							"y": 0
-							"width": 725
-							"height": 300
+							"width": 760
+							"height": 335
 						} )
 					}, new FormLayoutConstraints( null ) {
 						"title": new FormMessage( null, "DeCodeAndEnCodes.tab.title" )
 					} )
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-					"x": 15
+					"x": 20
 					"y": 25
-					"width": 720
-					"height": 335
+					"width": 760
+					"height": 370
 				} )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"width": 750
-				"height": 375
+				"width": 795
+				"height": 415
 				"x": 0
 				"y": 135
 			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )
-			"size": new java.awt.Dimension( 760, 540 )
+			"size": new java.awt.Dimension( 805, 590 )
 		} )
 	}
 }

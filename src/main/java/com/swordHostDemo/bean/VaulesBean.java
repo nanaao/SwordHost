@@ -4,7 +4,7 @@ package com.swordHostDemo.bean;
  * @date: 2022/12/26 18:00
  * @description:
  */
-public class OptionsBean {
+public class VaulesBean {
     private String rhost;
     private String rport;
     private String lhost;

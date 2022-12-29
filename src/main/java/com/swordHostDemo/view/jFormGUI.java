@@ -143,7 +143,6 @@ public class jFormGUI extends JFrame {
 
     private void Babut2DeCodeMouseClicked(MouseEvent e) {
         // TODO add your code here
-        // TODO add your code here
         String Base64DeText = Base64EnsTextArea.getText();
         String vaule = DeCode.base64Decode(Base64DeText);
         Bas64DeTextArea.setText(vaule);
@@ -158,6 +157,7 @@ public class jFormGUI extends JFrame {
 
     private void button2MouseClicked(MouseEvent e) {
         // TODO add your code here
+        //交换按钮功能实现
         String a = Base64EnsTextArea.getText();
         String b = Bas64DeTextArea.getText();
         String t = a;
@@ -222,7 +222,6 @@ public class jFormGUI extends JFrame {
         DeCodeAndEnCodes = new JPanel();
         DeAndEnCodeBase64s = new JTabbedPane();
         Base64DeCodes = new JPanel();
-        Base64EnsTextArea = new JTextArea();
         label1 = new JLabel();
         label2 = new JLabel();
         scrollPane10 = new JScrollPane();
@@ -230,6 +229,8 @@ public class jFormGUI extends JFrame {
         Babut1EnCode = new JButton();
         Babut2DeCode = new JButton();
         Base64buttonSwap = new JButton();
+        scrollPane11 = new JScrollPane();
+        Base64EnsTextArea = new JTextArea();
 
         //======== this ========
         setTitle(bundle.getString("this.title"));
@@ -256,7 +257,6 @@ public class jFormGUI extends JFrame {
                 LPORT.setBounds(new Rectangle(new Point(190, 10), LPORT.getPreferredSize()));
 
                 //---- LhostValue ----
-                LhostValue.setText(bundle.getString("LhostValue.text"));
                 LhostValue.addKeyListener(new KeyAdapter() {
                     @Override
                     public void keyReleased(KeyEvent e) {
@@ -267,7 +267,6 @@ public class jFormGUI extends JFrame {
                 LhostValue.setBounds(50, 5, 115, LhostValue.getPreferredSize().height);
 
                 //---- LportValue ----
-                LportValue.setText(bundle.getString("LportValue.text"));
                 LportValue.addKeyListener(new KeyAdapter() {
                     @Override
                     public void keyReleased(KeyEvent e) {
@@ -283,7 +282,6 @@ public class jFormGUI extends JFrame {
                 DNSLog.setBounds(new Rectangle(new Point(305, 10), DNSLog.getPreferredSize()));
 
                 //---- DNSlogValue ----
-                DNSlogValue.setText(bundle.getString("DNSlogValue.text"));
                 DNSlogValue.addKeyListener(new KeyAdapter() {
                     @Override
                     public void keyReleased(KeyEvent e) {
@@ -309,7 +307,7 @@ public class jFormGUI extends JFrame {
                 }
             }
             Panel1.add(LPanel1);
-            LPanel1.setBounds(10, 10, 650, 45);
+            LPanel1.setBounds(10, 15, 650, 45);
 
             //======== RPanel2 ========
             {
@@ -326,7 +324,6 @@ public class jFormGUI extends JFrame {
                 RPORT.setBounds(new Rectangle(new Point(190, 10), RPORT.getPreferredSize()));
 
                 //---- RhostValue ----
-                RhostValue.setText(bundle.getString("RhostValue.text"));
                 RhostValue.addKeyListener(new KeyAdapter() {
                     @Override
                     public void keyReleased(KeyEvent e) {
@@ -337,7 +334,6 @@ public class jFormGUI extends JFrame {
                 RhostValue.setBounds(50, 5, 115, RhostValue.getPreferredSize().height);
 
                 //---- RportVaule ----
-                RportVaule.setText(bundle.getString("RportVaule.text"));
                 RportVaule.addKeyListener(new KeyAdapter() {
                     @Override
                     public void keyReleased(KeyEvent e) {
@@ -353,7 +349,6 @@ public class jFormGUI extends JFrame {
                 Command.setBounds(new Rectangle(new Point(305, 10), Command.getPreferredSize()));
 
                 //---- CommandVaule ----
-                CommandVaule.setText(bundle.getString("CommandVaule.text"));
                 CommandVaule.addKeyListener(new KeyAdapter() {
                     @Override
                     public void keyReleased(KeyEvent e) {
@@ -379,7 +374,7 @@ public class jFormGUI extends JFrame {
                 }
             }
             Panel1.add(RPanel2);
-            RPanel2.setBounds(10, 60, 650, 45);
+            RPanel2.setBounds(10, 65, 650, 45);
 
             {
                 // compute preferred size
@@ -397,7 +392,7 @@ public class jFormGUI extends JFrame {
             }
         }
         contentPane.add(Panel1);
-        Panel1.setBounds(0, 0, 670, 120);
+        Panel1.setBounds(5, 15, 670, 120);
 
         //======== Panel2 ========
         {
@@ -537,25 +532,23 @@ public class jFormGUI extends JFrame {
                         //======== Base64DeCodes ========
                         {
                             Base64DeCodes.setLayout(null);
-                            Base64DeCodes.add(Base64EnsTextArea);
-                            Base64EnsTextArea.setBounds(25, 40, 600, 95);
 
                             //---- label1 ----
                             label1.setText(bundle.getString("label1.text"));
                             Base64DeCodes.add(label1);
-                            label1.setBounds(new Rectangle(new Point(25, 15), label1.getPreferredSize()));
+                            label1.setBounds(new Rectangle(new Point(25, 10), label1.getPreferredSize()));
 
                             //---- label2 ----
                             label2.setText(bundle.getString("label2.text"));
                             Base64DeCodes.add(label2);
-                            label2.setBounds(new Rectangle(new Point(30, 150), label2.getPreferredSize()));
+                            label2.setBounds(30, 165, label2.getPreferredSize().width, 21);
 
                             //======== scrollPane10 ========
                             {
                                 scrollPane10.setViewportView(Bas64DeTextArea);
                             }
                             Base64DeCodes.add(scrollPane10);
-                            scrollPane10.setBounds(25, 180, 600, 110);
+                            scrollPane10.setBounds(25, 195, 650, 140);
 
                             //---- Babut1EnCode ----
                             Babut1EnCode.setText(bundle.getString("Babut1EnCode.text"));
@@ -566,7 +559,7 @@ public class jFormGUI extends JFrame {
                                 }
                             });
                             Base64DeCodes.add(Babut1EnCode);
-                            Babut1EnCode.setBounds(new Rectangle(new Point(190, 145), Babut1EnCode.getPreferredSize()));
+                            Babut1EnCode.setBounds(new Rectangle(new Point(190, 160), Babut1EnCode.getPreferredSize()));
 
                             //---- Babut2DeCode ----
                             Babut2DeCode.setText(bundle.getString("Babut2DeCode.text"));
@@ -577,7 +570,7 @@ public class jFormGUI extends JFrame {
                                 }
                             });
                             Base64DeCodes.add(Babut2DeCode);
-                            Babut2DeCode.setBounds(new Rectangle(new Point(335, 145), Babut2DeCode.getPreferredSize()));
+                            Babut2DeCode.setBounds(new Rectangle(new Point(345, 160), Babut2DeCode.getPreferredSize()));
 
                             //---- Base64buttonSwap ----
                             Base64buttonSwap.setText(bundle.getString("Base64buttonSwap.text"));
@@ -588,7 +581,14 @@ public class jFormGUI extends JFrame {
                                 }
                             });
                             Base64DeCodes.add(Base64buttonSwap);
-                            Base64buttonSwap.setBounds(new Rectangle(new Point(485, 145), Base64buttonSwap.getPreferredSize()));
+                            Base64buttonSwap.setBounds(new Rectangle(new Point(500, 160), Base64buttonSwap.getPreferredSize()));
+
+                            //======== scrollPane11 ========
+                            {
+                                scrollPane11.setViewportView(Base64EnsTextArea);
+                            }
+                            Base64DeCodes.add(scrollPane11);
+                            scrollPane11.setBounds(25, 30, 650, 125);
 
                             {
                                 // compute preferred size
@@ -608,7 +608,7 @@ public class jFormGUI extends JFrame {
                         DeAndEnCodeBase64s.addTab(bundle.getString("Base64DeCodes.tab.title"), Base64DeCodes);
                     }
                     DeCodeAndEnCodes.add(DeAndEnCodeBase64s);
-                    DeAndEnCodeBase64s.setBounds(0, 0, 725, 300);
+                    DeAndEnCodeBase64s.setBounds(0, 0, 760, 335);
 
                     {
                         // compute preferred size
@@ -628,7 +628,7 @@ public class jFormGUI extends JFrame {
                 JtabbedPanel.addTab(bundle.getString("DeCodeAndEnCodes.tab.title"), DeCodeAndEnCodes);
             }
             Panel2.add(JtabbedPanel);
-            JtabbedPanel.setBounds(15, 25, 720, 335);
+            JtabbedPanel.setBounds(20, 25, 760, 370);
 
             {
                 // compute preferred size
@@ -646,7 +646,7 @@ public class jFormGUI extends JFrame {
             }
         }
         contentPane.add(Panel2);
-        Panel2.setBounds(0, 135, 750, 375);
+        Panel2.setBounds(0, 135, 795, 415);
 
         {
             // compute preferred size
@@ -718,7 +718,6 @@ public class jFormGUI extends JFrame {
     private JPanel DeCodeAndEnCodes;
     private JTabbedPane DeAndEnCodeBase64s;
     private JPanel Base64DeCodes;
-    private JTextArea Base64EnsTextArea;
     private JLabel label1;
     private JLabel label2;
     private JScrollPane scrollPane10;
@@ -726,5 +725,7 @@ public class jFormGUI extends JFrame {
     private JButton Babut1EnCode;
     private JButton Babut2DeCode;
     private JButton Base64buttonSwap;
+    private JScrollPane scrollPane11;
+    private JTextArea Base64EnsTextArea;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }
