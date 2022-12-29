@@ -5,6 +5,8 @@
 package com.swordHostDemo.view;
 
 import com.swordHostDemo.controller.*;
+import com.swordHostDemo.utls.DeCode;
+import com.swordHostDemo.utls.EnCode;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -34,11 +36,11 @@ public class jFormGUI extends JFrame {
     //Reverse
     public void ReverseMenu() {
         //BashOption
-        String baseOption = base64Code.ReverseBash(LhostValue.getText(), LportValue.getText());
+        String baseOption = Reverse.ReverseBash(LhostValue.getText(), LportValue.getText());
         BashTextArea.setText(baseOption);
 
         //JavaBashOption
-        String javaBashOption = base64Code.JavaEncode(LhostValue.getText(), LportValue.getText());
+        String javaBashOption = EnCode.JavaEncode(LhostValue.getText(), LportValue.getText());
         JavaBashTextArea.setText(javaBashOption);
     }
 
@@ -143,14 +145,14 @@ public class jFormGUI extends JFrame {
         // TODO add your code here
         // TODO add your code here
         String Base64DeText = Base64EnsTextArea.getText();
-        String vaule = base64Code.base64Decode(Base64DeText);
+        String vaule = DeCode.base64Decode(Base64DeText);
         Bas64DeTextArea.setText(vaule);
     }
 
     private void Babut1EnCodeMouseClicked(MouseEvent e) {
         // TODO add your code here
         String Base64DeText = Base64EnsTextArea.getText();
-        String vaule = base64Code.base64Eecode(Base64DeText);
+        String vaule = EnCode.base64Encode(Base64DeText);
         Bas64DeTextArea.setText(vaule);
     }
 

