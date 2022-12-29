@@ -1,6 +1,6 @@
-package com.bashgui.controller;
+package com.swordHostDemo.controller;
 
-import com.bashgui.bean.OptionsBean;
+import com.swordHostDemo.bean.OptionsBean;
 
 /**
  * @date: 2022/12/28 20:19

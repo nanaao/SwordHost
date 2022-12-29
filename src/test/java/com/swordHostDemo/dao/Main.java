@@ -1,9 +1,9 @@
-package com.bashgui.dao;
+package com.swordHostDemo.dao;
 
-import com.bashgui.bean.OptionsBean;
-import com.bashgui.controller.base64Code;
-import com.bashgui.controller.MsfShell;
-import com.bashgui.controller.Proxy;
+import com.swordHostDemo.bean.OptionsBean;
+import com.swordHostDemo.controller.base64Code;
+import com.swordHostDemo.controller.MsfShell;
+import com.swordHostDemo.controller.Proxy;
 
 /**
  * @date: 2022/12/27 9:31

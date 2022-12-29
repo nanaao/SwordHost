@@ -1,4 +1,4 @@
-package com.bashgui.bean;
+package com.swordHostDemo.bean;
 
 /**
  * @date: 2022/12/26 18:00

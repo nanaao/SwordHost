@@ -1,6 +1,4 @@
-package com.bashgui.view;
-
-import com.bashgui.utls.SQLiteUtils;
+package com.swordHostDemo.view;
 
 import javax.swing.*;
 

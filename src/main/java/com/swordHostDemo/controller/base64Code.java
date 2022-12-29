@@ -1,4 +1,4 @@
-package com.bashgui.controller;
+package com.swordHostDemo.controller;
 
 import java.io.UnsupportedEncodingException;
 import java.util.Base64;

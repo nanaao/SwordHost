@@ -1,4 +1,4 @@
-package com.bashgui.view;
+package com.swordHostDemo.view;
 
 import org.junit.Test;
 

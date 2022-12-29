@@ -2,9 +2,9 @@
  * Created by JFormDesigner on Tue Dec 27 14:58:35 CST 2022
  */
 
-package com.bashgui.view;
+package com.swordHostDemo.view;
 
-import com.bashgui.controller.*;
+import com.swordHostDemo.controller.*;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
