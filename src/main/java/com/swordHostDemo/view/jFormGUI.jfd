@@ -8,6 +8,7 @@ new FormModel {
 		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
 			name: "this"
 			"title": new FormMessage( null, "this.title" )
+			addEvent( new FormEvent( "java.awt.event.WindowListener", "windowOpened", "thisWindowOpened", true ) )
 			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
 				name: "Panel1"
 				"border": &EmptyBorder0 new javax.swing.border.EmptyBorder( 12, 12, 12, 12 )
@@ -17,21 +18,23 @@ new FormModel {
 						name: "LHOST"
 						"text": new FormMessage( null, "LHOST.text" )
 					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-						"x": 5
-						"y": 11
+						"x": 10
+						"y": 10
+						"width": 55
 					} )
 					add( new FormComponent( "javax.swing.JLabel" ) {
 						name: "LPORT"
 						"text": "LPORT"
 					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-						"x": 190
+						"x": 200
 						"y": 10
+						"width": 55
 					} )
 					add( new FormComponent( "javax.swing.JTextField" ) {
 						name: "LhostValue"
 						addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "LhostValueKeyReleased", true ) )
 					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-						"x": 50
+						"x": 65
 						"y": 5
 						"width": 115
 					} )
@@ -39,7 +42,7 @@ new FormModel {
 						name: "LportValue"
 						addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "LportValueKeyReleased", true ) )
 					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-						"x": 235
+						"x": 250
 						"y": 5
 						"width": 55
 					} )
@@ -47,22 +50,41 @@ new FormModel {
 						name: "DNSLog"
 						"text": "DNSLog"
 					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-						"x": 305
+						"x": 335
 						"y": 10
+						"width": 65
 					} )
 					add( new FormComponent( "javax.swing.JTextField" ) {
 						name: "DNSlogValue"
 						addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "DNSlogValueKeyReleased", true ) )
 					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-						"x": 375
+						"x": 410
 						"y": 5
-						"width": 105
+						"width": 110
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "FileName"
+						"text": "File name"
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 70
+						"height": 17
+						"x": 540
+						"y": 10
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "FileNameVaule"
+						addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "FileNameVauleKeyReleased", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 110
+						"height": 30
+						"x": 605
+						"y": 5
 					} )
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 					"x": 10
 					"y": 15
 					"height": 45
-					"width": 650
+					"width": 755
 				} )
 				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
 					name: "RPanel2"
@@ -70,21 +92,23 @@ new FormModel {
 						name: "RHOST"
 						"text": new FormMessage( null, "RHOST.text" )
 					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-						"x": 5
-						"y": 11
+						"x": 10
+						"y": 10
+						"width": 55
 					} )
 					add( new FormComponent( "javax.swing.JLabel" ) {
 						name: "RPORT"
 						"text": "RPORT"
 					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-						"x": 190
+						"x": 200
 						"y": 10
+						"width": 55
 					} )
 					add( new FormComponent( "javax.swing.JTextField" ) {
 						name: "RhostValue"
 						addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "RhostValueKeyReleased", true ) )
 					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-						"x": 50
+						"x": 65
 						"y": 5
 						"width": 115
 					} )
@@ -92,7 +116,7 @@ new FormModel {
 						name: "RportVaule"
 						addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "RportVauleKeyReleased", true ) )
 					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-						"x": 235
+						"x": 250
 						"y": 5
 						"width": 55
 					} )
@@ -100,25 +124,26 @@ new FormModel {
 						name: "Command"
 						"text": "Command"
 					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-						"x": 305
+						"x": 335
 						"y": 10
+						"width": 70
 					} )
 					add( new FormComponent( "javax.swing.JTextField" ) {
 						name: "CommandVaule"
 						addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "CommandVauleKeyReleased", true ) )
 					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-						"x": 375
+						"x": 410
 						"y": 5
 						"width": 110
 					} )
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-					"width": 650
+					"width": 760
 					"height": 45
 					"x": 10
 					"y": 65
 				} )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"width": 670
+				"width": 780
 				"height": 120
 				"x": 5
 				"y": 15
@@ -134,10 +159,18 @@ new FormModel {
 						add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
 							name: "BashOption"
 							add( new FormComponent( "javax.swing.JTextArea" ) {
-								name: "BashTextArea"
+								name: "Bash1TextArea"
 							} )
 						}, new FormLayoutConstraints( null ) {
-							"title": "Bash"
+							"title": "Bash 1"
+						} )
+						add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+							name: "scrollPane1"
+							add( new FormComponent( "javax.swing.JTextArea" ) {
+								name: "Bash2TextArea"
+							} )
+						}, new FormLayoutConstraints( null ) {
+							"title": "Bash 2"
 						} )
 						add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
 							name: "JavaBashOption"
@@ -150,16 +183,270 @@ new FormModel {
 					}, new FormLayoutConstraints( null ) {
 						"title": new FormMessage( null, "ReverseMenu.tab.title" )
 					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+						name: "RCEMenu"
+						add( new FormContainer( "javax.swing.JTabbedPane", new FormLayoutManager( class javax.swing.JTabbedPane ) ) {
+							name: "CurlOption"
+							"tabPlacement": 2
+							add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+								name: "panel3"
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "label6"
+									"text": new FormMessage( null, "label6.text" )
+								}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+									"x": 20
+									"y": 35
+								} )
+								add( new FormComponent( "javax.swing.JTextField" ) {
+									name: "Curl2TextField"
+								}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+									"width": 645
+									"height": 30
+									"x": 20
+									"y": 150
+								} )
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "label8"
+									"text": new FormMessage( null, "label8.text" )
+								}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+									"width": 43
+									"height": 17
+									"x": 20
+									"y": 125
+								} )
+								add( new FormComponent( "javax.swing.JTextField" ) {
+									name: "Curl1TextField"
+								}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+									"width": 645
+									"height": 30
+									"x": 20
+									"y": 85
+								} )
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "label7"
+									"text": new FormMessage( null, "label7.text" )
+								}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+									"width": 43
+									"height": 17
+									"x": 20
+									"y": 60
+								} )
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "label9"
+									"text": new FormMessage( null, "label9.text" )
+								}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+									"x": 20
+									"y": 5
+									"width": 105
+									"height": 30
+								} )
+							}, new FormLayoutConstraints( null ) {
+								"title": new FormMessage( null, "panel3.tab.title" )
+							} )
+							add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+								name: "WgetOption"
+								add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+									name: "scrollPane7"
+									add( new FormComponent( "javax.swing.JTextArea" ) {
+										name: "Wget1TextArea"
+									} )
+								}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+									"x": 20
+									"y": 25
+									"width": 655
+									"height": 130
+								} )
+							}, new FormLayoutConstraints( null ) {
+								"title": new FormMessage( null, "WgetOption.tab.title" )
+							} )
+							add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+								name: "PythonOption"
+								add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+									name: "scrollPane12"
+									add( new FormComponent( "javax.swing.JTextArea" ) {
+										name: "PythonTextArea"
+									} )
+								}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+									"x": 15
+									"y": 30
+									"width": 645
+									"height": 145
+								} )
+							}, new FormLayoutConstraints( null ) {
+								"title": new FormMessage( null, "PythonOption.tab.title" )
+							} )
+							add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+								name: "panel7"
+							}, new FormLayoutConstraints( null ) {
+								"title": new FormMessage( null, "panel7.tab.title" )
+							} )
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+							"x": 0
+							"y": 0
+							"width": 760
+							"height": 335
+						} )
+					}, new FormLayoutConstraints( null ) {
+						"title": new FormMessage( null, "RCEMenu.tab.title" )
+					} )
 					add( new FormContainer( "javax.swing.JTabbedPane", new FormLayoutManager( class javax.swing.JTabbedPane ) ) {
 						name: "msfs"
 						"tabPlacement": 2
-						add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
-							name: "scrollPane3"
-							add( new FormComponent( "javax.swing.JTextArea" ) {
-								name: "msfTextArea"
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+							name: "LinuxPayloadOptions"
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "label33"
+								"text": new FormMessage( null, "label33.text" )
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+								"x": 25
+								"y": 25
+							} )
+							add( new FormComponent( "javax.swing.JTextField" ) {
+								name: "msfLinuxHexTextField"
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+								"x": 20
+								"y": 50
+								"width": 625
+							} )
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "label34"
+								"text": new FormMessage( null, "label34.text" )
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+								"x": 25
+								"y": 95
+							} )
+							add( new FormComponent( "javax.swing.JTextField" ) {
+								name: "msfLinuxELFTextField"
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+								"x": 20
+								"y": 125
+								"width": 625
 							} )
 						}, new FormLayoutConstraints( null ) {
-							"title": "Linux"
+							"title": new FormMessage( null, "LinuxPayloadOptions.tab.title" )
+						} )
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+							name: "msfListenerOptions"
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "label36"
+								"text": new FormMessage( null, "label36.text" )
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+								"x": 30
+								"y": 20
+							} )
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "label37"
+								"text": new FormMessage( null, "label37.text" )
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+								"x": 30
+								"y": 175
+							} )
+							add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+								name: "scrollPane16"
+								add( new FormComponent( "javax.swing.JTextArea" ) {
+									name: "msfLinuxListenerTextArea"
+								} )
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+								"x": 25
+								"y": 45
+								"width": 610
+								"height": 110
+							} )
+							add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+								name: "scrollPane17"
+								add( new FormComponent( "javax.swing.JTextArea" ) {
+									name: "msfWindowsListenerTextArea"
+								} )
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+								"x": 25
+								"y": 205
+								"width": 610
+								"height": 105
+							} )
+						}, new FormLayoutConstraints( null ) {
+							"title": new FormMessage( null, "msfListenerOptions.tab.title" )
+						} )
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+							name: "msfRootOptions"
+							add( new FormComponent( "javax.swing.JTextField" ) {
+								name: "msfRootTextField"
+								"text": new FormMessage( null, "msfRootTextField.text" )
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+								"x": 25
+								"y": 35
+								"width": 300
+							} )
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "label28"
+								"text": new FormMessage( null, "label28.text" )
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+								"x": 30
+								"y": 10
+							} )
+							add( new FormComponent( "javax.swing.JButton" ) {
+								name: "msfCopyRootButton"
+								"text": new FormMessage( null, "msfCopyRootButton.text" )
+								addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "msfCopyRootButtonMouseClicked", true ) )
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+								"x": 340
+								"y": 35
+							} )
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "label29"
+								"text": new FormMessage( null, "label29.text" )
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+								"x": 30
+								"y": 85
+							} )
+							add( new FormComponent( "javax.swing.JButton" ) {
+								name: "msfCopyRootButton2"
+								"text": new FormMessage( null, "msfCopyRootButton2.text" )
+								addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "msfCopyRootButton2MouseClicked", true ) )
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+								"x": 30
+								"y": 210
+							} )
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "label31"
+								"text": new FormMessage( null, "label31.text" )
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+								"x": 25
+								"y": 150
+							} )
+							add( new FormComponent( "javax.swing.JTextField" ) {
+								name: "sessionIdTextField"
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+								"x": 90
+								"y": 145
+							} )
+							add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+								name: "scrollPane15"
+								add( new FormComponent( "javax.swing.JTextArea" ) {
+									name: "msfRootTextArea"
+								} )
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+								"x": 230
+								"y": 165
+								"width": 445
+								"height": 155
+							} )
+							add( new FormComponent( "javax.swing.JTextField" ) {
+								name: "msfPayloadCopyTextField"
+								"text": new FormMessage( null, "msfPayloadCopyTextField.text" )
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+								"x": 90
+								"y": 110
+								"width": 370
+							} )
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "label32"
+								"text": new FormMessage( null, "label32.text" )
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+								"x": 25
+								"y": 115
+							} )
+						}, new FormLayoutConstraints( null ) {
+							"title": new FormMessage( null, "msfRootOptions.tab.title" )
 						} )
 					}, new FormLayoutConstraints( null ) {
 						"title": new FormMessage( null, "msfs.tab.title" )
@@ -168,101 +455,444 @@ new FormModel {
 						name: "Stoways"
 						"cursor": new java.awt.Cursor( 2 )
 						"tabPlacement": 2
-						add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
-							name: "scrollPane2"
-							"componentPopupMenu": sfield com.jformdesigner.model.FormObject NULL_VALUE
-							add( new FormComponent( "javax.swing.JTextArea" ) {
-								name: "StowayTextArea"
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+							name: "AdminOptions"
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "label5"
+								"text": new FormMessage( null, "label5.text" )
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+								"x": 25
+								"y": 10
+							} )
+							add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+								name: "scrollPane4"
+								add( new FormComponent( "javax.swing.JTextArea" ) {
+									name: "stAdminTextArea"
+								} )
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+								"x": 20
+								"y": 35
+								"width": 650
+								"height": 105
+							} )
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "label19"
+								"text": new FormMessage( null, "label19.text" )
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+								"x": 20
+								"y": 165
+							} )
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "label20"
+								"text": new FormMessage( null, "label20.text" )
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+								"x": 20
+								"y": 190
+							} )
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "label21"
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+								"x": 555
+								"y": 85
+							} )
+							add( new FormComponent( "javax.swing.JTextField" ) {
+								name: "stSocksTextField"
+								"text": new FormMessage( null, "stSocksTextField.text" )
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+								"x": 60
+								"y": 210
+								"width": 75
+							} )
+							add( new FormComponent( "javax.swing.JButton" ) {
+								name: "stCopyIpSocksButton"
+								"text": new FormMessage( null, "stCopyIpSocksButton.text" )
+								addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "stCopyIpSocksButtonMouseClicked", true ) )
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+								"x": 150
+								"y": 210
+							} )
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "label22"
+								"text": new FormMessage( null, "label22.text" )
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+								"x": 20
+								"y": 215
+							} )
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "label23"
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+								"x": 550
+								"y": 115
+							} )
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "label24"
+								"text": new FormMessage( null, "label24.text" )
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+								"x": 20
+								"y": 300
+								"height": 17
+							} )
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "label25"
+								"text": new FormMessage( null, "label25.text" )
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+								"x": 20
+								"y": 275
+							} )
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "label26"
+								"text": new FormMessage( null, "label26.text" )
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+								"x": 20
+								"y": 145
+							} )
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "label27"
+								"text": new FormMessage( null, "label27.text" )
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+								"x": 20
+								"y": 250
 							} )
 						}, new FormLayoutConstraints( null ) {
-							"title": "res"
+							"title": new FormMessage( null, "AdminOptions.tab.title" )
 						} )
-						add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
-							name: "scrollPane4"
-							add( new FormComponent( "javax.swing.JTextArea" ) {
-								name: "downloadTextArea"
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+							name: "AgentOptions"
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "label17"
+								"text": new FormMessage( null, "label17.text" )
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+								"width": 150
+								"height": 17
+								"x": 20
+								"y": 15
+							} )
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "label18"
+								"text": new FormMessage( null, "label18.text" )
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+								"width": 150
+								"height": 17
+								"x": 20
+								"y": 160
+							} )
+							add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+								name: "scrollPane13"
+								add( new FormComponent( "javax.swing.JTextArea" ) {
+									name: "stLinuxAgentTextArea"
+								} )
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+								"x": 20
+								"y": 45
+								"width": 645
+								"height": 85
+							} )
+							add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+								name: "scrollPane14"
+								add( new FormComponent( "javax.swing.JTextArea" ) {
+									name: "stWindowsAgentTextArea"
+								} )
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+								"x": 20
+								"y": 195
+								"width": 645
+								"height": 80
 							} )
 						}, new FormLayoutConstraints( null ) {
-							"title": "download"
+							"title": new FormMessage( null, "AgentOptions.tab.title" )
 						} )
 					}, new FormLayoutConstraints( null ) {
 						"title": new FormMessage( null, "Stoways.tab.title" )
 					} )
-					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
-						"axis": 0
-					} ) {
-						name: "Fastjsons"
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+						name: "JavaMenu"
 						add( new FormContainer( "javax.swing.JTabbedPane", new FormLayoutManager( class javax.swing.JTabbedPane ) ) {
-							name: "tabbedPane1"
+							name: "tabbedPane4"
 							"tabPlacement": 2
-							add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
-								name: "FaVersion"
-								add( new FormComponent( "javax.swing.JTextArea" ) {
-									name: "FaVersionTextArea"
-									"text": new FormMessage( null, "FaVersionTextArea.text" )
+							add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+								name: "FastjsonOptions"
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "label38"
+									"text": new FormMessage( null, "label38.text" )
+								}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+									"x": 25
+									"y": 20
+								} )
+								add( new FormComponent( "javax.swing.JTextField" ) {
+									name: "textField5"
+									"text": new FormMessage( null, "textField5.text" )
+								}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+									"x": 20
+									"y": 45
+									"width": 480
+								} )
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "label39"
+									"text": new FormMessage( null, "label39.text" )
+								}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+									"x": 25
+									"y": 90
+								} )
+								add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+									name: "scrollPane18"
+									add( new FormComponent( "javax.swing.JTextArea" ) {
+										name: "FaDNSlogTextArea"
+									} )
+								}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+									"x": 25
+									"y": 125
+									"width": 475
+									"height": 90
 								} )
 							}, new FormLayoutConstraints( null ) {
-								"title": "Version"
+								"title": new FormMessage( null, "FastjsonOptions.tab.title" )
 							} )
-							add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
-								name: "FaDNSlog"
-								add( new FormComponent( "javax.swing.JTextArea" ) {
-									name: "FaDNSlogTextArea"
+							add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+								name: "FaEXP1Options"
+								add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+									name: "FaEXP1"
+									add( new FormComponent( "javax.swing.JTextArea" ) {
+										name: "FaEXP1TextArea"
+									} )
+								}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+									"width": 620
+									"height": 265
+									"x": 10
+									"y": 10
+								} )
+								add( new FormComponent( "javax.swing.JButton" ) {
+									name: "FaCopyEXP1TextArea"
+									"text": new FormMessage( null, "FaCopyEXP1TextArea.text" )
+									addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "FaCopyEXP1TextAreaMouseClicked", true ) )
+								}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+									"x": 15
+									"y": 305
+								} )
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "FaCopyEcholabel"
+								}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+									"x": 170
+									"y": 305
+									"width": 255
+									"height": 25
 								} )
 							}, new FormLayoutConstraints( null ) {
-								"title": "DNSlog"
+								"title": new FormMessage( null, "FaEXP1Options.tab.title" )
 							} )
-							add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
-								name: "FaEXP1"
-								add( new FormComponent( "javax.swing.JTextArea" ) {
-									name: "FaEXP1TextArea"
+							add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+								name: "Log4j2Options"
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "label40"
+									"text": new FormMessage( null, "label40.text" )
+								}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+									"x": 25
+									"y": 25
 								} )
-							}, new FormLayoutConstraints( null ) {
-								"title": "EXP1"
-							} )
-						} )
-					}, new FormLayoutConstraints( null ) {
-						"title": new FormMessage( null, "Fastjsons.tab.title" )
-					} )
-					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
-						"axis": 0
-					} ) {
-						name: "Log4j2s"
-						add( new FormContainer( "javax.swing.JTabbedPane", new FormLayoutManager( class javax.swing.JTabbedPane ) ) {
-							name: "tabbedPane2"
-							"tabPlacement": 2
-							add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
-								name: "scrollPane8"
-								add( new FormComponent( "javax.swing.JTextArea" ) {
-									name: "LoDNSlogTextArea"
-								} )
-							}, new FormLayoutConstraints( null ) {
-								"title": "DNSlog"
-							} )
-							add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
-								name: "scrollPane9"
-								add( new FormComponent( "javax.swing.JTextArea" ) {
+								add( new FormComponent( "javax.swing.JTextField" ) {
 									name: "LoIPTextArea"
+								}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+									"x": 25
+									"y": 55
+									"width": 510
+								} )
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "label41"
+									"text": new FormMessage( null, "label41.text" )
+								}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+									"x": 25
+									"y": 95
+								} )
+								add( new FormComponent( "javax.swing.JTextField" ) {
+									name: "LoDNSlogTextArea"
+								}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+									"x": 25
+									"y": 130
+									"width": 510
 								} )
 							}, new FormLayoutConstraints( null ) {
-								"title": "IP"
+								"title": new FormMessage( null, "Log4j2Options.tab.title" )
 							} )
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+							"x": 0
+							"y": 0
+							"width": 750
+							"height": 380
 						} )
 					}, new FormLayoutConstraints( null ) {
-						"title": new FormMessage( null, "Log4j2s.tab.title" )
+						"title": new FormMessage( null, "JavaMenu.tab.title" )
 					} )
-					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
-						"axis": 0
-					} ) {
-						name: "Custom"
-						add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
-							name: "scrollPane5"
-							add( new FormComponent( "javax.swing.JTextArea" ) {
-								name: "textArea2"
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+						name: "REs"
+						add( new FormContainer( "javax.swing.JTabbedPane", new FormLayoutManager( class javax.swing.JTabbedPane ) ) {
+							name: "tabbedPane3"
+							"tabPlacement": 2
+							add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+								name: "panel9"
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "label11"
+								}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+									"x": 25
+									"y": 40
+								} )
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "label12"
+								}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+									"x": 15
+									"y": 65
+								} )
+								add( new FormComponent( "javax.swing.JButton" ) {
+									name: "IPCopybutton"
+									"text": new FormMessage( null, "IPCopybutton.text" )
+									addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "IPCopybuttonMouseClicked", true ) )
+								}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+									"x": 15
+									"y": 35
+								} )
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "CopyEcholabel"
+									"autoscrolls": true
+								}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+									"x": 20
+									"y": 285
+									"width": 630
+									"height": 45
+								} )
+								add( new FormComponent( "javax.swing.JButton" ) {
+									name: "URLCopybutton"
+									"text": new FormMessage( null, "URLCopybutton.text" )
+									addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "URLCopybuttonMouseClicked", true ) )
+								}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+									"x": 115
+									"y": 35
+								} )
+								add( new FormComponent( "javax.swing.JButton" ) {
+									name: "URLPathbutton"
+									"text": new FormMessage( null, "URLPathbutton.text" )
+									addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "URLPathbuttonMouseClicked", true ) )
+								}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+									"x": 240
+									"y": 35
+								} )
+								add( new FormComponent( "javax.swing.JButton" ) {
+									name: "URLPortbutton"
+									"text": new FormMessage( null, "URLPortbutton.text" )
+									addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "URLPortbuttonMouseClicked", true ) )
+								}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+									"x": 350
+									"y": 35
+								} )
+								add( new FormComponent( "javax.swing.JButton" ) {
+									name: "AliyunaAccessKey"
+									"text": new FormMessage( null, "AliyunaAccessKey.text" )
+									addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "AliyunaAccessKeyMouseClicked", true ) )
+								}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+									"x": 15
+									"y": 90
+								} )
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "label10"
+									"text": new FormMessage( null, "label10.text" )
+								}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+									"x": 20
+									"y": 10
+								} )
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "label13"
+									"text": new FormMessage( null, "label13.text" )
+								}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+									"x": 180
+									"y": 10
+								} )
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "label14"
+									"text": new FormMessage( null, "label14.text" )
+								}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+									"width": 59
+									"height": 17
+									"x": 20
+									"y": 70
+								} )
+								add( new FormComponent( "javax.swing.JButton" ) {
+									name: "AliyunSecretKey"
+									"text": new FormMessage( null, "AliyunSecretKey.text" )
+									addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "AliyunSecretKeyMouseClicked", true ) )
+								}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+									"x": 115
+									"y": 90
+								} )
+								add( new FormComponent( "javax.swing.JButton" ) {
+									name: "AliyunOssUrl"
+									"text": new FormMessage( null, "AliyunOssUrl.text" )
+									addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "AliyunOssUrlMouseClicked", true ) )
+								}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+									"x": 215
+									"y": 90
+								} )
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "label15"
+									"text": new FormMessage( null, "label15.text" )
+								}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+									"x": 20
+									"y": 125
+								} )
+								add( new FormComponent( "javax.swing.JButton" ) {
+									name: "AWSAccessKeyId"
+									"text": new FormMessage( null, "AWSAccessKeyId.text" )
+									addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "AWSAccessKeyIdMouseClicked", true ) )
+								}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+									"x": 15
+									"y": 150
+								} )
+								add( new FormComponent( "javax.swing.JButton" ) {
+									name: "AWSAuthToken"
+									"text": new FormMessage( null, "AWSAuthToken.text" )
+									addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "AWSAuthTokenMouseClicked", true ) )
+								}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+									"x": 130
+									"y": 150
+								} )
+								add( new FormComponent( "javax.swing.JButton" ) {
+									name: "AWSURL"
+									"text": new FormMessage( null, "AWSURL.text" )
+									addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "AWSURLMouseClicked", true ) )
+								}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+									"x": 245
+									"y": 150
+								} )
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "label16"
+									"text": new FormMessage( null, "label16.text" )
+								}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+									"x": 20
+									"y": 185
+								} )
+								add( new FormComponent( "javax.swing.JButton" ) {
+									name: "SSHkey"
+									"text": new FormMessage( null, "SSHkey.text" )
+									addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "SSHkeyMouseClicked", true ) )
+								}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+									"x": 15
+									"y": 210
+								} )
+								add( new FormComponent( "javax.swing.JButton" ) {
+									name: "RSAKEYbutton"
+									"text": new FormMessage( null, "RSAKEYbutton.text" )
+									addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "RSAKEYbuttonMouseClicked", true ) )
+								}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+									"x": 110
+									"y": 210
+								} )
+							}, new FormLayoutConstraints( null ) {
+								"title": new FormMessage( null, "panel9.tab.title" )
 							} )
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+							"x": 0
+							"y": 0
+							"width": 760
+							"height": 355
 						} )
 					}, new FormLayoutConstraints( null ) {
-						"title": new FormMessage( null, "Custom.tab.title" )
+						"title": new FormMessage( null, "REs.tab.title" )
 					} )
 					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
 						name: "DeCodeAndEnCodes"
@@ -302,7 +932,7 @@ new FormModel {
 									"text": new FormMessage( null, "Babut1EnCode.text" )
 									addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "Babut1EnCodeMouseClicked", true ) )
 								}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-									"x": 190
+									"x": 185
 									"y": 160
 								} )
 								add( new FormComponent( "javax.swing.JButton" ) {
@@ -310,7 +940,7 @@ new FormModel {
 									"text": new FormMessage( null, "Babut2DeCode.text" )
 									addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "Babut2DeCodeMouseClicked", true ) )
 								}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-									"x": 345
+									"x": 320
 									"y": 160
 								} )
 								add( new FormComponent( "javax.swing.JButton" ) {
@@ -318,7 +948,7 @@ new FormModel {
 									"text": new FormMessage( null, "Base64buttonSwap.text" )
 									addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "button2MouseClicked", true ) )
 								}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-									"x": 500
+									"x": 460
 									"y": 160
 								} )
 								add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
@@ -332,6 +962,22 @@ new FormModel {
 									"x": 25
 									"y": 30
 								} )
+								add( new FormComponent( "javax.swing.JButton" ) {
+									name: "BaCopyResButton"
+									"text": new FormMessage( null, "BaCopyResButton.text" )
+									addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "BaCopyResButtonMouseClicked", true ) )
+								}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+									"x": 25
+									"y": 340
+								} )
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "BaCopyEcholabel"
+								}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+									"x": 130
+									"y": 340
+									"width": 170
+									"height": 30
+								} )
 							}, new FormLayoutConstraints( null ) {
 								"title": new FormMessage( null, "Base64DeCodes.tab.title" )
 							} )
@@ -339,26 +985,159 @@ new FormModel {
 							"x": 0
 							"y": 0
 							"width": 760
-							"height": 335
+							"height": 380
 						} )
 					}, new FormLayoutConstraints( null ) {
 						"title": new FormMessage( null, "DeCodeAndEnCodes.tab.title" )
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+						name: "RandomMenu"
+						add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+							name: "scrollPane6"
+							add( new FormContainer( "javax.swing.JTabbedPane", new FormLayoutManager( class javax.swing.JTabbedPane ) ) {
+								name: "tabbedPane5"
+								"tabPlacement": 2
+								add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+									name: "panel2"
+									add( new FormComponent( "javax.swing.JButton" ) {
+										name: "RandomButton"
+										"text": new FormMessage( null, "RandomButton.text" )
+										addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "RandomButtonMouseClicked", true ) )
+									}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+										"x": 10
+										"y": 10
+									} )
+									add( new FormComponent( "javax.swing.JTextField" ) {
+										name: "RandomTextField"
+									}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+										"x": 10
+										"y": 70
+										"width": 425
+										"height": 35
+									} )
+									add( new FormComponent( "javax.swing.JCheckBox" ) {
+										name: "ABCcheckBox"
+										"text": new FormMessage( null, "ABCcheckBox.text" )
+									}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+										"x": 20
+										"y": 45
+									} )
+									add( new FormComponent( "javax.swing.JCheckBox" ) {
+										name: "abcckBox"
+										"text": new FormMessage( null, "abcckBox.text" )
+									}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+										"width": 47
+										"height": 22
+										"x": 80
+										"y": 45
+									} )
+									add( new FormComponent( "javax.swing.JCheckBox" ) {
+										name: "NumcheckBox"
+										"text": new FormMessage( null, "NumcheckBox.text" )
+									}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+										"width": 47
+										"height": 22
+										"x": 140
+										"y": 45
+									} )
+									add( new FormComponent( "javax.swing.JCheckBox" ) {
+										name: "SigncheckBox"
+										"text": new FormMessage( null, "SigncheckBox.text" )
+									}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+										"width": 47
+										"height": 22
+										"x": 200
+										"y": 45
+									} )
+									add( new FormComponent( "javax.swing.JSpinner" ) {
+										name: "PasswordLens"
+									}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+										"x": 320
+										"y": 40
+									} )
+									add( new FormComponent( "javax.swing.JLabel" ) {
+										name: "label4"
+										"text": new FormMessage( null, "label4.text" )
+									}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+										"x": 265
+										"y": 45
+									} )
+									add( new FormComponent( "javax.swing.JButton" ) {
+										name: "CopyPasswordbutton"
+										"text": new FormMessage( null, "CopyPasswordbutton.text" )
+										addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "CopyPasswordbuttonMouseClicked", true ) )
+									}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+										"x": 455
+										"y": 75
+									} )
+								}, new FormLayoutConstraints( null ) {
+									"title": new FormMessage( null, "panel2.tab.title" )
+								} )
+							} )
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+							"x": 5
+							"y": 0
+							"width": 750
+							"height": 375
+						} )
+					}, new FormLayoutConstraints( null ) {
+						"title": new FormMessage( null, "RandomMenu.tab.title" )
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+						"axis": 0
+					} ) {
+						name: "Custom"
+						add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+							name: "scrollPane5"
+							add( new FormContainer( "javax.swing.JTabbedPane", new FormLayoutManager( class javax.swing.JTabbedPane ) ) {
+								name: "CustomEditOptions"
+								"tabPlacement": 2
+								add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+									name: "CustomSaveJp"
+									add( new FormComponent( "javax.swing.JLabel" ) {
+										name: "label42"
+										"text": new FormMessage( null, "label42.text" )
+									}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+										"x": 30
+										"y": 20
+									} )
+								}, new FormLayoutConstraints( null ) {
+									"title": new FormMessage( null, "CustomSaveJp.tab.title" )
+								} )
+								add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+									name: "CustomEdit1IOptions"
+									add( new FormComponent( "javax.swing.JTextArea" ) {
+										name: "CustomEdit1TextArea"
+									} )
+								}, new FormLayoutConstraints( null ) {
+									"title": "自定义编辑区域"
+								} )
+							} )
+						} )
+					}, new FormLayoutConstraints( null ) {
+						"title": new FormMessage( null, "Custom.tab.title" )
 					} )
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 					"x": 20
 					"y": 25
 					"width": 760
-					"height": 370
+					"height": 420
 				} )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"width": 795
-				"height": 415
+				"height": 455
 				"x": 0
 				"y": 135
 			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label3"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 30
+				"y": 10
+			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )
-			"size": new java.awt.Dimension( 805, 590 )
+			"size": new java.awt.Dimension( 805, 630 )
 		} )
 	}
 }

