@@ -16,8 +16,8 @@ public class BaseDao {
             Class.forName("org.sqlite.JDBC");
             conn = DriverManager.getConnection("jdbc:sqlite:data.db");
             stmt = conn.createStatement();
-            stmt.setQueryTimeout(60);
 
+            stmt.setQueryTimeout(60);
             //打印输出语句
             System.out.println(sql);
             stmt.executeUpdate(sql);
