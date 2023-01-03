@@ -47,11 +47,11 @@ public class Metasploit extends MenuBean {
 
 
 
-    public static void main(String[] args) {
-        System.out.println(ListenerLinuxhandler("123", "123"));
-        System.out.println(ListenerWindowshandler("123", "123"));
-        System.out.println(RootCommand("exploit/linux/local/cve_2021_4034_pwnkit_lpe_pkexec","1234","1234","2"));
-    }
+//    public static void main(String[] args) {
+//        System.out.println(ListenerLinuxhandler("123", "123"));
+//        System.out.println(ListenerWindowshandler("123", "123"));
+//        System.out.println(RootCommand("exploit/linux/local/cve_2021_4034_pwnkit_lpe_pkexec","1234","1234","2"));
+//    }
 
 
 

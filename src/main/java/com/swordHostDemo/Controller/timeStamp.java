@@ -19,7 +19,7 @@ public class timeStamp {
         return sdf+"\r\n"+sdf2;
     }
 
-    public static void main(String[] args) {
-        timeStampSimpleDate("1527767665");
-    }
+//    public static void main(String[] args) {
+//        timeStampSimpleDate("1527767665");
+//    }
 }

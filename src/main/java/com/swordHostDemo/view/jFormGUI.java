@@ -28,7 +28,6 @@ public class jFormGUI extends JFrame {
     }
 
     public void init() {
-        Appinit();
         ReverseMenu();
         StowawayMenu();
         msfShellMenu();
@@ -168,7 +167,6 @@ public class jFormGUI extends JFrame {
 
         // TODO add your code here
         //测试
-        updateSQL();
         String Lhost = LhostValue.getText();
         System.out.println(Lhost);
         //调用方法
@@ -180,7 +178,6 @@ public class jFormGUI extends JFrame {
     private void LportValueKeyReleased(KeyEvent e) {
         // TODO add your code here
         //测试
-        updateSQL();
         String Lport = LportValue.getText();
         System.out.println(Lport);
         //调用方法
@@ -191,7 +188,6 @@ public class jFormGUI extends JFrame {
     private void DNSlogValueKeyReleased(KeyEvent e) {
         // TODO add your code here
         //测试
-        updateSQL();
         String dnslog = DNSlogValue.getText();
         System.out.println(dnslog);
         //调用方法
@@ -203,7 +199,6 @@ public class jFormGUI extends JFrame {
     private void RhostValueKeyReleased(KeyEvent e) {
         // TODO add your code here
         //测试
-        updateSQL();
         String rhost = RhostValue.getText();
         System.out.println(rhost);
         //调用方法
@@ -214,7 +209,6 @@ public class jFormGUI extends JFrame {
     //Rport
     private void RportVauleKeyReleased(KeyEvent e) {
         //测试
-        updateSQL();
         String rport = RportVaule.getText();
         System.out.println(rport);
         //调用方法
@@ -225,7 +219,6 @@ public class jFormGUI extends JFrame {
     //Command
     private void CommandVauleKeyReleased(KeyEvent e) {
         // TODO add your code here
-        updateSQL();
         //测试
         String command = CommandVaule.getText();
         System.out.println(command);
@@ -237,7 +230,6 @@ public class jFormGUI extends JFrame {
     //FielName
     private void FileNameVauleKeyReleased(KeyEvent e) {
         // TODO add your code here
-        updateSQL();
         String fileNameVaule = FileNameVaule.getText();
         System.out.println(fileNameVaule);
         init();
@@ -275,8 +267,8 @@ public class jFormGUI extends JFrame {
     //窗口启动做的事情
     private void thisWindowOpened(WindowEvent e) {
         // TODO add your code here
-        init();
         Appinit();
+        init();
 
     }
 
@@ -425,6 +417,12 @@ public class jFormGUI extends JFrame {
     }
 
 
+    private void thisWindowClosing(WindowEvent e) {
+        // TODO add your code here
+        updateSQL();
+    }
+
+
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
@@ -470,7 +468,6 @@ public class jFormGUI extends JFrame {
         PythonOption = new JPanel();
         scrollPane12 = new JScrollPane();
         PythonTextArea = new JTextArea();
-        panel7 = new JPanel();
         msfs = new JTabbedPane();
         LinuxPayloadOptions = new JPanel();
         label33 = new JLabel();
@@ -599,6 +596,10 @@ public class jFormGUI extends JFrame {
         //======== this ========
         setTitle(bundle.getString("this.title"));
         addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                thisWindowClosing(e);
+            }
             @Override
             public void windowOpened(WindowEvent e) {
                 thisWindowOpened(e);
@@ -919,27 +920,6 @@ public class jFormGUI extends JFrame {
                             }
                         }
                         CurlOption.addTab(bundle.getString("PythonOption.tab.title"), PythonOption);
-
-                        //======== panel7 ========
-                        {
-                            panel7.setLayout(null);
-
-                            {
-                                // compute preferred size
-                                Dimension preferredSize = new Dimension();
-                                for(int i = 0; i < panel7.getComponentCount(); i++) {
-                                    Rectangle bounds = panel7.getComponent(i).getBounds();
-                                    preferredSize.width = Math.max(bounds.x + bounds.width, preferredSize.width);
-                                    preferredSize.height = Math.max(bounds.y + bounds.height, preferredSize.height);
-                                }
-                                Insets insets = panel7.getInsets();
-                                preferredSize.width += insets.right;
-                                preferredSize.height += insets.bottom;
-                                panel7.setMinimumSize(preferredSize);
-                                panel7.setPreferredSize(preferredSize);
-                            }
-                        }
-                        CurlOption.addTab(bundle.getString("panel7.tab.title"), panel7);
                     }
                     RCEMenu.add(CurlOption);
                     CurlOption.setBounds(0, 0, 760, 335);
@@ -1084,7 +1064,7 @@ public class jFormGUI extends JFrame {
                             }
                         });
                         msfRootOptions.add(msfCopyRootButton2);
-                        msfCopyRootButton2.setBounds(new Rectangle(new Point(30, 210), msfCopyRootButton2.getPreferredSize()));
+                        msfCopyRootButton2.setBounds(new Rectangle(new Point(505, 285), msfCopyRootButton2.getPreferredSize()));
 
                         //---- label31 ----
                         label31.setText(bundle.getString("label31.text"));
@@ -1098,7 +1078,7 @@ public class jFormGUI extends JFrame {
                             scrollPane15.setViewportView(msfRootTextArea);
                         }
                         msfRootOptions.add(scrollPane15);
-                        scrollPane15.setBounds(230, 165, 445, 155);
+                        scrollPane15.setBounds(20, 200, 445, 155);
 
                         //---- msfPayloadCopyTextField ----
                         msfPayloadCopyTextField.setText(bundle.getString("msfPayloadCopyTextField.text"));
@@ -1500,7 +1480,7 @@ public class jFormGUI extends JFrame {
                             //---- label13 ----
                             label13.setText(bundle.getString("label13.text"));
                             panel9.add(label13);
-                            label13.setBounds(new Rectangle(new Point(180, 10), label13.getPreferredSize()));
+                            label13.setBounds(new Rectangle(new Point(120, 10), label13.getPreferredSize()));
 
                             //---- label14 ----
                             label14.setText(bundle.getString("label14.text"));
@@ -1894,6 +1874,9 @@ public class jFormGUI extends JFrame {
 
                             //======== CustomEdit1IOptions ========
                             {
+
+                                //---- CustomEdit1TextArea ----
+                                CustomEdit1TextArea.setText(bundle.getString("CustomEdit1TextArea.text"));
                                 CustomEdit1IOptions.setViewportView(CustomEdit1TextArea);
                             }
                             CustomEditOptions.addTab("\u81ea\u5b9a\u4e49\u7f16\u8f91\u533a\u57df", CustomEdit1IOptions);
@@ -1988,7 +1971,6 @@ public class jFormGUI extends JFrame {
     private JPanel PythonOption;
     private JScrollPane scrollPane12;
     private JTextArea PythonTextArea;
-    private JPanel panel7;
     private JTabbedPane msfs;
     private JPanel LinuxPayloadOptions;
     private JLabel label33;

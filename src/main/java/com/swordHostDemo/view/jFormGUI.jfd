@@ -9,6 +9,7 @@ new FormModel {
 			name: "this"
 			"title": new FormMessage( null, "this.title" )
 			addEvent( new FormEvent( "java.awt.event.WindowListener", "windowOpened", "thisWindowOpened", true ) )
+			addEvent( new FormEvent( "java.awt.event.WindowListener", "windowClosing", "thisWindowClosing", true ) )
 			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
 				name: "Panel1"
 				"border": &EmptyBorder0 new javax.swing.border.EmptyBorder( 12, 12, 12, 12 )
@@ -275,11 +276,6 @@ new FormModel {
 							}, new FormLayoutConstraints( null ) {
 								"title": new FormMessage( null, "PythonOption.tab.title" )
 							} )
-							add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
-								name: "panel7"
-							}, new FormLayoutConstraints( null ) {
-								"title": new FormMessage( null, "panel7.tab.title" )
-							} )
 						}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 							"x": 0
 							"y": 0
@@ -403,8 +399,8 @@ new FormModel {
 								"text": new FormMessage( null, "msfCopyRootButton2.text" )
 								addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "msfCopyRootButton2MouseClicked", true ) )
 							}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-								"x": 30
-								"y": 210
+								"x": 505
+								"y": 285
 							} )
 							add( new FormComponent( "javax.swing.JLabel" ) {
 								name: "label31"
@@ -425,8 +421,8 @@ new FormModel {
 									name: "msfRootTextArea"
 								} )
 							}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-								"x": 230
-								"y": 165
+								"x": 20
+								"y": 200
 								"width": 445
 								"height": 155
 							} )
@@ -800,7 +796,7 @@ new FormModel {
 									name: "label13"
 									"text": new FormMessage( null, "label13.text" )
 								}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-									"x": 180
+									"x": 120
 									"y": 10
 								} )
 								add( new FormComponent( "javax.swing.JLabel" ) {
@@ -1108,6 +1104,7 @@ new FormModel {
 									name: "CustomEdit1IOptions"
 									add( new FormComponent( "javax.swing.JTextArea" ) {
 										name: "CustomEdit1TextArea"
+										"text": new FormMessage( null, "CustomEdit1TextArea.text" )
 									} )
 								}, new FormLayoutConstraints( null ) {
 									"title": "自定义编辑区域"
